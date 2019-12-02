@@ -33,16 +33,18 @@ const App = () => {
   return (
     <div>
       <svg viewBox="0 0 250 250" className={classes.container}>
-        <g>
-          <circle r="60" cx="120" cy="120" className={classes.shadow}/>
-          <path d ="M60,120a60,60 0 1,0 120,0a60,60 0 1,0 -120,0"
-          className={classes.circle1}/>
-          <circle r="50" cx="120" cy="120" className={classes.circle2}/>
-        </g>
-        {/* <g transform="translate(10, 30)"> */}
-          {/* <circle r="10" cx="180" cy="120" className={classes.circle3}/> */}
-        {/* </g> */}
-        {/* <Circle3/> */}
+          <g>
+            <circle r="60" cx="120" cy="120" className={classes.shadow}/>
+            <path d ="M60,120a60,60 0 1,0 120,0a60,60 0 1,0 -120,0"
+            className={classes.circle1}/>
+            <circle r="50" cx="120" cy="120" className={classes.circle2}/>
+          </g>
+          <circle className={classes.circle3}>
+            <animateMotion dur="20s" repeatCount="indefinite"
+            path="M60,120a60,60 0 1,0 120,0a60,60 0 1,0 -120,0" 
+            />
+            <animate attributeName="r" fill="freeze" from="10" to="20" dur="10s"/>
+          </circle>
       </svg>
     </div>
   );

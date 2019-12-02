@@ -32,11 +32,11 @@ const Circle3 = () => {
     // </g>
     // <path d="M110,120a10,10 0 1,0 20,0a10,10 0 1,0 -20,0" 
     // />
-    // <circle r="5" fill="red" cx={110} cy={180}>
-    <path d="M100,180a10,10 0 1,0 20,0a10,10 0 1,0 -20,0" />
-    <animateMotion dur="10s" repeatCount="indefinite"
-      path="M100,180a10,10 0 1,0 20,0a10,10 0 1,0 -20,0" />
-  </path>
+    <circle r="5" fill="red" cx={110} cy={180}>
+    {/* <path d="M100,180a10,10 0 1,0 20,0a10,10 0 1,0 -20,0" > */}
+    <animateMotion dur="1s" repeatCount="indefinite"
+      path="M60,120a60,60 0 1,0 120,0a60,60 0 1,0 -120,0" />
+  </circle>
   );
 }
 
