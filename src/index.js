@@ -37,14 +37,19 @@ const App = () => {
             <circle r="60" cx="120" cy="120" className={classes.shadow}/>
             <path d ="M60,120a60,60 0 1,0 120,0a60,60 0 1,0 -120,0"
             className={classes.circle1}/>
+            <text x="90" y="120" fill="red">Some Text</text>
+
             <circle r="50" cx="120" cy="120" className={classes.circle2}/>
           </g>
           <circle className={classes.circle3}>
             <animateMotion dur="20s" repeatCount="indefinite"
             path="M60,120a60,60 0 1,0 120,0a60,60 0 1,0 -120,0" 
             />
-            <animate attributeName="r" fill="freeze" from="10" to="20" dur="10s"/>
+            <animate attributeName="r" fill="freeze" from="20" to="30" dur="10s"/>
+
+
           </circle>
+
       </svg>
     </div>
   );
