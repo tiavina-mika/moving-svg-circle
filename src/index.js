@@ -47,9 +47,16 @@ const useStyles = makeStyles({
 
 const App = () => {
   const classes = useStyles();
+  const [zoom, setZoom] = React.useState(0)
+  const onWheel = e => {
+    const { pageX, pageY, deltaY } = e;
+
+    deltaY > 0 ? setZoom(zoom + 1): setZoom(zoom - 1)
+    console.log(zoom * 10)
+  }
 
   return (
-    <div>
+    <div onWheel={onWheel}>
       <svg viewBox="0 0 300 300" className={classes.container}>
           <line x1="20" x2="20" y1="0" y2="300" style={{stroke: '#404040', strokeWidth:"0.4"}}/>
           <g>
@@ -59,7 +66,7 @@ const App = () => {
             className={classes.circle1}/> */}
 
             <circle r="100" cx="150" cy="150" className={classes.circle1}/>
-            <circle r="80" cx="150" cy="150" className={classes.circle2}/>
+            <circle r={zoom? 80 + (zoom * 10): 80 - (zoom * 10)} cx="150" cy="150" className={classes.circle2}/>
             <text x="110" y="100" className={classes.text}>Development -</text>
           </g>
           <g>
