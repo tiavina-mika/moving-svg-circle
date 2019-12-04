@@ -33,18 +33,21 @@ const useStyles = makeStyles({
   circleOut1: {
     stroke: '#31BCB1',
     fill: 'none',
-    strokeWidth: '0.4'
+    strokeWidth: '0.4',
+    '&:hover': {
+      fill: '#31BCB1'
+    }
   },
   circleOut2: {
     stroke: '#16534E',
     fill: 'none',
     strokeWidth: '0.3'
   },
-
 })
 
 const App = () => {
   const classes = useStyles();
+
   return (
     <div>
       <svg viewBox="0 0 300 300" className={classes.container}>
@@ -60,16 +63,16 @@ const App = () => {
           </g>
           <g>
             <circle cx="70" className={classes.circleOut2}>
-              <animate attributeName="r" fill="freeze" from="40" to="45" dur="2s"repeatCount="indefinite"/>
-              <animate attributeName="cy" fill="freeze" from="180" to="190" dur="2s"repeatCount="indefinite"/>
+              <animate attributeName="r" fill="freeze" values="40; 45; 40" dur="2s"repeatCount="indefinite"/>
+              <animate attributeName="cy" fill="freeze" values="180; 185; 190; 185; 180" dur="2s"repeatCount="indefinite"/>
             
             </circle>
             <circle cx="70" className={classes.circleOut1}>
                 {/* <animateMotion dur="20s" repeatCount="indefinite"
                 path="M60,120a60,60 0 1,0 120,0a60,60 0 1,0 -120,0" 
                 /> */}
-                <animate attributeName="r" fill="freeze" from="30" to="35" dur="2s"repeatCount="indefinite"/>
-                <animate attributeName="cy" fill="freeze" from="180" to="190" dur="2s"repeatCount="indefinite"/>
+                <animate attributeName="r" fill="freeze" values="30; 35; 30" dur="2s"repeatCount="indefinite"/>
+                <animate attributeName="cy" values="180; 185; 190; 185; 180" dur="2s"repeatCount="indefinite"/>
               </circle>
           </g>
 
