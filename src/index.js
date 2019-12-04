@@ -51,6 +51,7 @@ const App = () => {
   return (
     <div>
       <svg viewBox="0 0 300 300" className={classes.container}>
+          <line x1="20" x2="20" y1="0" y2="300" style={{stroke: '#404040', strokeWidth:"0.4"}}/>
           <g>
             {/* <circle r="60" cx="120" cy="120" className={classes.shadow}/>
             <circle r="60" cx="120" cy="120" className={classes.shadow}/> */}
@@ -64,7 +65,7 @@ const App = () => {
           <g>
             <circle cx="70" className={classes.circleOut2}>
               <animate attributeName="r" fill="freeze" values="40; 45; 40" dur="2s"repeatCount="indefinite"/>
-              <animate attributeName="cy" fill="freeze" values="180; 185; 190; 185; 180" dur="2s"repeatCount="indefinite"/>
+              <animate attributeName="cy" fill="freeze" values="180; 182; 185; 182; 180" dur="3.1s"repeatCount="indefinite"/>
             
             </circle>
             <circle cx="70" className={classes.circleOut1}>
@@ -72,10 +73,10 @@ const App = () => {
                 path="M60,120a60,60 0 1,0 120,0a60,60 0 1,0 -120,0" 
                 /> */}
                 <animate attributeName="r" fill="freeze" values="30; 35; 30" dur="2s"repeatCount="indefinite"/>
-                <animate attributeName="cy" values="180; 185; 190; 185; 180" dur="2s"repeatCount="indefinite"/>
+                <animate attributeName="cy" values="180; 182; 185; 182; 180" dur="3s"repeatCount="indefinite"/>
               </circle>
           </g>
-
+          <line x1="80" x2="80" y1="0" y2="300" style={{stroke: '#404040', strokeWidth:"0.4"}}/>
       </svg>
     </div>
   );
